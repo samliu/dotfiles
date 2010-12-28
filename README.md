@@ -1,8 +1,7 @@
-#Sam's Dot files
-(based on Will Leinweber / Ryan Bates Dot Files)
+##Sam's Dot files
+####(based on Will Leinweber / Ryan Bates Dot Files)
 
-Installation
--------------
+###Installation
   chsh -s /bin/zsh
   git clone git@github.com:samliu/osxdotfiles.git ~/.dotfiles
   cd ~/.dotfiles
