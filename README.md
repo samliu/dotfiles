@@ -7,7 +7,8 @@
 
 ###Preferred Method
   I prefer to install my ruby/rubygems via rvm (http://rvm.beginrescueend.com)
-  If you would like to do this also, go ahead and do
+  If you would like to do this also, go ahead and do:
+
   * sudo port install rvm
   * rvm install 1.9.2
   * rvm gemset create mydefault
