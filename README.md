@@ -4,6 +4,7 @@
 ###Prereqs
   * Ruby
   * Rubygems
+  * zsh
 
 ###Preferred Method
   I prefer to install my ruby/rubygems via rvm (http://rvm.beginrescueend.com)
