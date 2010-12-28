@@ -1,5 +1,4 @@
-Sam's Dot files
-----------------
+#Sam's Dot files
 (based on Will Leinweber / Ryan Bates Dot Files)
 
 Installation
