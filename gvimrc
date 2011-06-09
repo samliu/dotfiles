@@ -5,3 +5,4 @@ if &background == "dark"
 endif
 
 set guifont=Inconsolata:h16
+colorscheme ir_black

@@ -13,8 +13,18 @@ set tabstop=2
 set softtabstop=2
 set shiftwidth=2
 
-" colors
-colorscheme ir_black
+if has("autocmd")
+  " Python indent settings
+  augroup module
+    autocmd BufRead,BufNewFile *.py set tabstop=4
+    autocmd BufRead,BufNewFile *.py set shiftwidth=4
+    autocmd BufRead,BufNewFile *.py set softtabstop=4
+  augroup END
+endif
+
+colorscheme koehler
+
+
 syntax on
 
 " search
@@ -49,9 +59,9 @@ imap jj <Esc>
 vmap D y'>p
 " folding
 set foldmethod=indent
-set foldnestmax=10
+"set foldnestmax=10
 set nofoldenable
-set foldlevel=1
+set foldlevel=99
 
 au BufNewFile,BufRead *.mxml set filetype=mxml
 au BufNewFile,BufRead *.as set filetype=actionscript

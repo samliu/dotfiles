@@ -1,6 +1,8 @@
 alias grep="grep -i"
 alias psg="ps auxwwww | grep -v grep | grep"
 
+alias vim="mvim"
+
 alias ss="script/server"
 alias sc="script/console"
 
