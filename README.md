@@ -11,9 +11,9 @@
   If you would like to do this also, go ahead and do:
 
   * sudo port install rvm
-  * rvm install 1.9.2
+  * rvm install (latest ruby version number e.g 1.9.2)
   * rvm gemset create mydefault
-  * rvm use 1.9.2@mydefault --default
+  * rvm use (version number)@mydefault --default
 
 ###Installation
   * chsh -s /bin/zsh

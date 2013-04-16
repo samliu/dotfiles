@@ -1,41 +1,41 @@
 [user]
-	name = Sam Liu
-	email = sam@ambushnetworks.com
+    name = Sam Liu
+    email = sam@ambushnetworks.com
 [core]
-	excludesfile = /Users/samliu/.gitignore
-	editor = vim
+    excludesfile = /Users/samliu/.gitignore
+    editor = vim
 [color]
-	diff = auto
-	status = auto
-	branch = auto
-	interactive = auto
+    diff = auto
+    status = auto
+    branch = auto
+    interactive = auto
 [color "branch"]
-	current = yellow reverse
-	local = yellow
-	remote = green
+    current = yellow reverse
+    local = yellow
+    remote = green
 [color "diff"]
-	meta = yellow bold
-	frag = magenta bold
-	old = red bold
-	new = green bold
+    meta = yellow bold
+    frag = magenta bold
+    old = red bold
+    new = green bold
 [color "status"]
-	added = yellow
-	changed = green
-	untracked = cyan
+    added = yellow
+    changed = green
+    untracked = cyan
 [alias]
-	ci = commit
-	co = checkout
+    ci = commit
+    co = checkout
   logl = log --pretty=oneline --abbrev-commit --decorate
   lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %f %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
   unadd = update-index --force-remove
 [github]
-	user = samliu
+    user = samliu
 [branch]
-	autosetupmerge = true
+    autosetupmerge = true
 [apply]
-	whitespace = nowarn
+    whitespace = nowarn
 [merge "gemfilelock"]
   name = relocks the gemfile.lock
   driver = bundle lock
 [push]
-	default = tracking
+    default = tracking

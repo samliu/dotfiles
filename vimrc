@@ -9,18 +9,32 @@ set ttyfast
 set autoindent
 set smartindent
 set expandtab
-set tabstop=2
-set softtabstop=2
-set shiftwidth=2
+set tabstop=4
+set softtabstop=4
+set shiftwidth=4
 
 if has("autocmd")
+  " Ruby indent settings
+  augroup module
+    autocmd BufRead,BufNewFile *.rb set tabstop=2
+    autocmd BufRead,BufNewFile *.rb set shiftwidth=2
+    autocmd BufRead,BufNewFile *.rb set softtabstop=2
+  augroup END
+  augroup module
+    "autocmd BufRead,BufNewFile *.py set foldmethod=syntax
+  augroup END
+
   " Python indent settings
   augroup module
-    autocmd BufRead,BufNewFile *.py set tabstop=4
-    autocmd BufRead,BufNewFile *.py set shiftwidth=4
-    autocmd BufRead,BufNewFile *.py set softtabstop=4
+    autocmd BufRead,BufNewFile *.py set tabstop=2
+    autocmd BufRead,BufNewFile *.py set shiftwidth=2
+    autocmd BufRead,BufNewFile *.py set softtabstop=2
   augroup END
+
 endif
+
+" Open NerdTree
+map <leader>f :NERDTree<CR>
 
 colorscheme koehler
 
@@ -30,7 +44,7 @@ syntax on
 " search
 set showmatch
 set ignorecase
-set incsearch
+" set incsearch
 
 set autoread
 
@@ -46,9 +60,7 @@ set listchars=tab:▸\ ,eol:¬
 highlight NonText guifg=#4a4a59
 highlight SpecialKey guifg=#4a4a5
 
-
 set backspace=indent,eol,start
-
 
 map <leader>t :FuzzyFinderTextMate<CR>
 map <leader>l :ruby finder.rescan!<CR>
@@ -69,3 +81,6 @@ autocmd BufWritePre * :%s/\s\+$//e
 
 " Save on focus lost
 :au FocusLost * :wa
+
+"highlight ColorColumn ctermbg=lightgrey guibg=gray11
+"set colorcolumn=80
