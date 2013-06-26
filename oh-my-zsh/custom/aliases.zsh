@@ -5,9 +5,9 @@ alias grep="grep -i"
 alias psg="ps auxwwww | grep -v grep | grep"
 
 # Macports Installed MySQL5
-alias mysqlstart='sudo /opt/local/bin/mysqld_safe5 &'
-alias mysqlstop='/opt/local/bin/mysqladmin5 -u root -p shutdown'
-alias mysql ='/opt/local/bin/mysql5'
+#alias mysqlstart='sudo /opt/local/bin/mysqld_safe5 &'
+#alias mysqlstop='/opt/local/bin/mysqladmin5 -u root -p shutdown'
+#alias mysql ='/opt/local/bin/mysql5'
 
 # Start Apache
 alias apache2="sudo /opt/local/apache2/bin/httpd -k"
@@ -19,8 +19,8 @@ alias en0="ifconfig en0 | grep -Eo '([0-9]{1,3}\.){3}[0-9]{1,3}'"
 alias e="cd ~/.ec2"
 
 # Rails Shortcuts
-alias ss="script/server"
-alias sc="script/console"
+alias ss="rails server"
+alias sc="rails console"
 
 # Git shortcuts
 alias gs="git status"

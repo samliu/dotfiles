@@ -28,7 +28,7 @@ function gsay { mplayer -really-quiet "http://translate.google.com/translate_tts
 function gopen { gnome-open $1 }
 
 # Customize to your needs...
-export PATH=$PATH:~/bin:/usr/local/bin:/opt/local/bin:/usr/local/sbin:/usr/local/mysql/bin:/usr/local/git/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/Users/samliu/code/jruby/bin:/Users/samliu/.bin:/opt/local/Library/Frameworks/Python.framework/Versions/2.6/bin
+export PATH=/opt/local/bin:$PATH
 
 # For vmrun command
 export PATH="$PATH:/Library/Application Support/VMware Fusion"
@@ -50,3 +50,12 @@ if [[ -s $HOME/.rvm/scripts/rvm ]] ; then source $HOME/.rvm/scripts/rvm ; fi
 
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+
+# Virtualenv
+export WORKON_HOME=~/virtualenvs
+source /opt/local/Library/Frameworks/Python.framework/Versions/2.7/bin/virtualenvwrapper.sh
+workon default
+
+# Python
+#export PYTHONPATH=/opt/local/Library/Frameworks/Python.framework/Versions/Current/lib/python2.7/site-packages:${PYTHONPATH}
+#export PYTHONPATH=/opt/local/lib/python2.7/site-packages:${PYTHONPATH}

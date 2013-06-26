@@ -26,9 +26,9 @@ if has("autocmd")
 
   " Python indent settings
   augroup module
-    autocmd BufRead,BufNewFile *.py set tabstop=2
-    autocmd BufRead,BufNewFile *.py set shiftwidth=2
-    autocmd BufRead,BufNewFile *.py set softtabstop=2
+    autocmd BufRead,BufNewFile *.py set tabstop=4
+    autocmd BufRead,BufNewFile *.py set shiftwidth=4
+    autocmd BufRead,BufNewFile *.py set softtabstop=4
   augroup END
 
 endif
