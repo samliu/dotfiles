@@ -50,6 +50,7 @@ if [[ -s $HOME/.rvm/scripts/rvm ]] ; then source $HOME/.rvm/scripts/rvm ; fi
 
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+export rvm_wrappers_path="${HOME}/.rvm/wrappers"
 
 # Virtualenv
 export WORKON_HOME=~/virtualenvs

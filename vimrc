@@ -1,7 +1,8 @@
 set nocompatible
 set showcmd
 
-call pathogen#runtime_append_all_bundles()
+call pathogen#infect()
+filetype plugin indent on
 
 set ttyfast
 
@@ -84,3 +85,17 @@ autocmd BufWritePre * :%s/\s\+$//e
 
 "highlight ColorColumn ctermbg=lightgrey guibg=gray11
 "set colorcolumn=80
+
+" Add the virtualenv's site-packages to vim path
+if has('python')
+py << EOF
+import os.path
+import sys
+import vim
+if 'VIRTUAL_ENV' in os.environ:
+    project_base_dir = os.environ['VIRTUAL_ENV']
+    sys.path.insert(0, project_base_dir)
+    activate_this = os.path.join(project_base_dir, 'bin/activate_this.py')
+    execfile(activate_this, dict(__file__=activate_this))
+EOF
+endif
