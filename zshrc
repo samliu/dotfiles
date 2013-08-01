@@ -33,30 +33,25 @@ export PATH=/opt/local/bin:$PATH
 # For vmrun command
 export PATH="$PATH:/Library/Application Support/VMware Fusion"
 
-#For EC2
-export EC2_HOME=~/.ec2
-export PATH=$PATH:$EC2_HOME/bin
-
-##EC2 X.509 CERTS! PRIVATE. DONT COMMIT THIS TO GITHUB.
-export EC2_PRIVATE_KEY=pk-MRKZ2E2ORFCRFE2I6FON5LTUKWKMGUSU.pem
-export EC2_CERT=cert-MRKZ2E2ORFCRFE2I6FON5LTUKWKMGUSU.pem
-export JAVA_HOME=/System/Library/Frameworks/JavaVM.framework/Home/
-
-
-export CLASSPATH=$CLASSPATH:/usr/local/Cellar/clojure-contrib/1.2.0/clojure-contrib.jar
+# For cronolog (sudo port install cronolog)
+export PATH="$PATH:/opt/local/sbin"
 
 if [[ -s $HOME/.localrc ]] ; then source $HOME/.localrc ; fi
+
+# Add RVM to PATH for scripting
 if [[ -s $HOME/.rvm/scripts/rvm ]] ; then source $HOME/.rvm/scripts/rvm ; fi
-
-
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+PATH=$PATH:$HOME/.rvm/bin
 export rvm_wrappers_path="${HOME}/.rvm/wrappers"
+export RVM_WRAPPERS_PATH="${HOME}/.rvm/wrappers"
 
 # Virtualenv
 export WORKON_HOME=~/virtualenvs
 source /opt/local/Library/Frameworks/Python.framework/Versions/2.7/bin/virtualenvwrapper.sh
 workon default
 
-# Python
-#export PYTHONPATH=/opt/local/Library/Frameworks/Python.framework/Versions/Current/lib/python2.7/site-packages:${PYTHONPATH}
-#export PYTHONPATH=/opt/local/lib/python2.7/site-packages:${PYTHONPATH}
+# AWS
+export JAVA_HOME="/Library/JAVA/Home"
+export EC2_HOME="/Users/samliu/aws/ec2-api-tools-1.6.8.0"
+export PATH=$PATH:$EC2_HOME/bin
+export AWS_ACCESS_KEY="AKIAICZEJVTOPY2P56AQ"
+export AWS_SECRET_KEY="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"
