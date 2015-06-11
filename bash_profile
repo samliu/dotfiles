@@ -3,12 +3,16 @@ source ~/.bash/completions
 source ~/.bash/paths
 source ~/.bash/config
 
+# Use bashrc if it exists.
 if [ -f ~/.bashrc ]; then
   . ~/.bashrc
 fi
 
-#colorize terminal
+# Colorize terminal.
 export CLICOLOR=1;
 
-# android dev
-# export PATH=${PATH}:/Users/samliu/adt-bundle-mac-x86_64/sdk/platform-tools:/Users/samliu/adt-bundle-mac-x86_64/sdk/tools
+# MacPorts.
+export PATH="/opt/local/bin:/opt/local/sbin:$PATH"
+
+# RVM
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*

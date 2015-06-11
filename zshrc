@@ -38,20 +38,24 @@ export PATH="$PATH:/opt/local/sbin"
 
 if [[ -s $HOME/.localrc ]] ; then source $HOME/.localrc ; fi
 
-# Add RVM to PATH for scripting
-if [[ -s $HOME/.rvm/scripts/rvm ]] ; then source $HOME/.rvm/scripts/rvm ; fi
-PATH=$PATH:$HOME/.rvm/bin
-export rvm_wrappers_path="${HOME}/.rvm/wrappers"
-export RVM_WRAPPERS_PATH="${HOME}/.rvm/wrappers"
-
-# Virtualenv
-export WORKON_HOME=~/virtualenvs
-source /opt/local/Library/Frameworks/Python.framework/Versions/2.7/bin/virtualenvwrapper.sh
-workon default
-
 # AWS
 export JAVA_HOME="/Library/JAVA/Home"
 export EC2_HOME="/Users/samliu/aws/ec2-api-tools-1.6.8.0"
 export PATH=$PATH:$EC2_HOME/bin
 export AWS_ACCESS_KEY="AKIAICZEJVTOPY2P56AQ"
 export AWS_SECRET_KEY="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"
+
+# For MacPorts.
+export PATH="/opt/local/bin:/opt/local/sbin:$PATH"
+
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+source $HOME/.rvm/scripts/rvm
+
+# Virtualenvwrapper
+# export WORKON_HOME=~/virtualenvs
+# source /opt/local/Library/Frameworks/Python.framework/Versions/2.7/bin/virtualenvwrapper.sh
+# workon default
+
+
+# Virtualenv - Use our default virtualenv
+source /Users/samliu/virtualenvs/default/bin/activate

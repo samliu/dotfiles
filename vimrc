@@ -1,5 +1,6 @@
 set nocompatible
 set showcmd
+set nocp
 
 call pathogen#infect()
 filetype plugin indent on
@@ -99,3 +100,6 @@ if 'VIRTUAL_ENV' in os.environ:
     execfile(activate_this, dict(__file__=activate_this))
 EOF
 endif
+
+" Json Formatting
+com! FormatJSON %!python -m json.tool

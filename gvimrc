@@ -4,7 +4,7 @@ au BufRead,BufNewFile *.json set filetype=json
 set go-=T
 set bg=dark
 if &background == "dark"
-	hi normal guibg=black
+    hi normal guibg=black
 endif
 
 

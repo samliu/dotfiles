@@ -1,4 +1,7 @@
 #!/bin/sh
+#
+# Find and Replace util.
+
 set -e
 
 exe=$(basename $0)
