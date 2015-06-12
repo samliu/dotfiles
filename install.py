@@ -52,10 +52,13 @@ class DotfileInstaller(object):
                                 " exists and was last modified at " + 
                                 last_modified_time, color="OKGREEN")
       user_response = raw_input('overwrite ' + dotfile_fullpath + '? (y/n)') 
-      if user_response in ['y']:
-        # TODO(samcliu): add syscall here
+      if user_response not in ['y']:
+      	print 'skipping ' + dotfile_fullpath + '...'
         return
-      print 'skipping ' + dotfile_fullpath + '...'
+      # Overwrite file.
+      os.remove(dotfile_fullpath)
+    # Generate the symlink
+    os.system(cmd)
 
   def install(self, auto_override=False):
     """Installs dotfiles one by one, prompting for overwrites."""
