@@ -30,7 +30,7 @@ class DotfileInstaller(object):
 
     # Ensure we ignore non dotfiles (this script or READMEs, for instance).
     self.dotfiles = [word for word in self.dotfiles
- 		     if not word in self.ignore_files]
+             if not word in self.ignore_files]
     self.colorprinter = ColorPrinter()
 
   def link_file(self, filename):
@@ -48,7 +48,7 @@ class DotfileInstaller(object):
                                 last_modified_time, color="OKGREEN")
       user_response = raw_input('overwrite ' + dotfile_fullpath + '? (y/n)')
       if user_response not in ['y']:
-      	print 'skipping ' + dotfile_fullpath + '...'
+        print 'skipping ' + dotfile_fullpath + '...'
         return
       # Overwrite file.
       os.unlink(dotfile_fullpath)
