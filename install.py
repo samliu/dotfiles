@@ -53,7 +53,6 @@ class DotfileInstaller(object):
       # Overwrite file.
       os.unlink(dotfile_fullpath)
 
-    # TODO(samcliu): Handle directories correctly!!
     # Generate the symlink
     print cmd
     os.system(cmd)
