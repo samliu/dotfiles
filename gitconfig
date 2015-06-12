@@ -25,17 +25,14 @@
 [alias]
     ci = commit
     co = checkout
-  logl = log --pretty=oneline --abbrev-commit --decorate
-  lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %f %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
-  unadd = update-index --force-remove
+    logl = log --pretty=oneline --abbrev-commit --decorate
+    lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %f %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
+    unadd = update-index --force-remove
 [github]
     user = samliu
 [branch]
     autosetupmerge = true
 [apply]
     whitespace = nowarn
-[merge "gemfilelock"]
-  name = relocks the gemfile.lock
-  driver = bundle lock
 [push]
     default = tracking

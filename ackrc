@@ -1,5 +1,5 @@
---ignore-dir=vendor
---ignore-dir=coverage
+# This is a config file for ack, a grep-like text-finder.
+# See http://www.beyondgrep.com for details. 
 --pager=less -R -m -N -X
 --type-set=haml=.haml
 --type-set=sass=.sass
