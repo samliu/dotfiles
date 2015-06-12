@@ -1,7 +1,6 @@
-. ~/.zsh/aliases
+# Add zsh aliases. (Bash is a second-class citizen in these dotfiles, but
+# it is supported.)
+. ~/.oh-my-zsh/lib/aliases.zsh
 
-# changing directory to code project
+# Changing directory to code project.
 function c { cd ~/code/$1; }
-
-# misc
-alias reload='. ~/.bash_profile'

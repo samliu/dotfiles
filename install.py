@@ -6,7 +6,7 @@ import os
 
 class DotfileInstaller(object):
   """
-  Class that identifies and installs dotfiles by symlinking them to the correct 
+  Class that identifies and installs dotfiles by symlinking them to the correct
   location.
   """
 
@@ -22,18 +22,14 @@ class DotfileInstaller(object):
     self.homedir_files = os.listdir(self.homedir)
 
     # Files in the installer's directory that are actual dotfiles.
-    self.dotfiles = os.listdir(self.currdir) 
+    self.dotfiles = os.listdir(self.currdir)
 
-    # All actual dotfiles (ironically) are not prefixed with a dot in this 
-    # folder. This is so it is clear they're symlinked. 
+    # All actual dotfiles (ironically) are not prefixed with a dot in this
+    # folder. This is so it is clear they're symlinked.
     self.dotfiles = [word for word in self.dotfiles if not word.startswith('.')]
-    
-    # Ensure only files are considered dotfiles. Folders contain scripts and 
-    # hierarchy only and shouldn't be symlinked into the homedir.
-    self.dotfiles = [word for word in self.dotfiles if os.path.isfile(word)]
 
     # Ensure we ignore non dotfiles (this script or READMEs, for instance).
-    self.dotfiles = [word for word in self.dotfiles 
+    self.dotfiles = [word for word in self.dotfiles
  		     if not word in self.ignore_files]
     self.colorprinter = ColorPrinter()
 
@@ -41,23 +37,25 @@ class DotfileInstaller(object):
     """Generate symlink in home directory of the user for the dotfile."""
     dotfile_name = '.' + filename
     print 'linking ~/{0}...'.format(dotfile_name)
-
     dotfile_fullpath = self.homedir + '/' + dotfile_name
-    cmd = 'ln -s "{0}/{1}" "{2}"'.format(self.currdir, filename, 
-                                         dotfile_fullpath) 
-    if os.path.isfile(dotfile_fullpath):
+    cmd = 'ln -s "{0}/{1}" "{2}"'.format(self.currdir, filename,
+                                         dotfile_fullpath)
+    if os.path.isfile(dotfile_fullpath) or os.path.isdir(dotfile_fullpath):
       import time
       last_modified_time = str(time.ctime(os.stat(dotfile_fullpath).st_mtime))
-      self.colorprinter.println(dotfile_fullpath + 
-                                " exists and was last modified at " + 
+      self.colorprinter.println(dotfile_fullpath +
+                                " exists and was last modified at " +
                                 last_modified_time, color="OKGREEN")
-      user_response = raw_input('overwrite ' + dotfile_fullpath + '? (y/n)') 
+      user_response = raw_input('overwrite ' + dotfile_fullpath + '? (y/n)')
       if user_response not in ['y']:
       	print 'skipping ' + dotfile_fullpath + '...'
         return
       # Overwrite file.
-      os.remove(dotfile_fullpath)
+      os.unlink(dotfile_fullpath)
+
+    # TODO(samcliu): Handle directories correctly!!
     # Generate the symlink
+    print cmd
     os.system(cmd)
 
   def install(self, auto_override=False):
@@ -72,11 +70,11 @@ def cli():
   user_response = raw_input('Install dotfiles? (y/n) ')
 
   # Die if they don't say yes.
-  if user_response not in ['y', 'yes']: 
+  if user_response not in ['y', 'yes']:
     print "Nothing installed."
-    sys.exit() 
+    sys.exit()
 
-  # Install dotfiles one by one, prompting user for each one if there is an 
+  # Install dotfiles one by one, prompting user for each one if there is an
   # override.
   installer.install()
 
@@ -90,7 +88,7 @@ class ColorPrinter(object):
       "OKGREEN":   '\033[92m',
       "WARNING":   '\033[93m',
       "FAIL":      '\033[91m',
-      "ENDC":      '\033[0m', 
+      "ENDC":      '\033[0m',
       "BOLD":      '\033[1m',
       "UNDERLINE": '\033[4m',
     }
@@ -99,7 +97,7 @@ class ColorPrinter(object):
     if color in self.colors:
       print self.colors[color] + text + self.colors["ENDC"]
     else:
-      print text 
+      print text
 
 
 if __name__ == "__main__":
