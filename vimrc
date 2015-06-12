@@ -1,13 +1,33 @@
 " Unset compatibility mode for vi. Needed for vundle.
 set nocompatible
 
-" Turn off filetype (detection, plugin, and indent).
+" Turn off filetype (detection, plugin, and indent). Temporary, for vundle.
+" We turn it back on after vundle runs.
 " http://vimdoc.sourceforge.net/htmldoc/filetype.html
 filetype off
 
 " Vundle, plugin management for vim.
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
+
+" INSERT VUNDLE PLUGINS HERE.
+
+call vundle#end()            " required
+
+" To ignore plugin indent changes, instead use:
+"filetype plugin on
+filetype plugin indent on    " required
+"
+" Brief help
+" :PluginList       - lists configured plugins
+" :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
+" :PluginSearch foo - searches for foo; append `!` to refresh local cache
+" :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
+"
+" see :h vundle for more details or wiki for FAQ.
+" Put your non-Plugin stuff after this line.
+
+" START SAM'S VIM CONFIGS 
 
 " When you set showcmd in your vimrc, the bottom line in your editor will show
 " you information about the current command going on.
