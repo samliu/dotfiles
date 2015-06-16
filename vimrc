@@ -7,11 +7,44 @@ set nocompatible
 filetype off
 
 " Vundle, plugin management for vim.
+" Vundle can install plugins from git repos, local, vim-scripts.org, etc.
+" Vundle has namespacing for installed plugins.
+" 
+" These dotfiles used to use Pathogen instead, but Vundle makes it easier to 
+" maintain / upgrade vim plugsin.
+" 
+" To install vundle plugins, launch `vim` and run `:PluginInstall`
+" To update vundle plugins, run :PluginUpdate
+
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin("~/.vim/bundle")
 
+" let Vundle manage Vundle, required
+Plugin 'gmarik/Vundle.vim'
+
 " INSERT VUNDLE PLUGINS HERE.
 
+" The following are examples of different formats supported.
+" Keep Plugin commands between vundle#begin/end.
+
+" plugin on GitHub repo
+" Plugin 'tpope/vim-fugitive'
+
+" plugin from http://vim-scripts.org/vim/scripts.html
+" Plugin 'L9'
+
+" Git plugin not hosted on GitHub
+Plugin 'git://git.wincent.com/command-t.git'
+
+" git repos on your local machine (i.e. when working on your own plugin)
+" Plugin 'file:///home/gmarik/path/to/plugin'
+
+" The sparkup vim script is in a subdirectory of this repo called vim.
+" Pass the path to set the runtimepath properly.
+" Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
+
+" Avoid a name conflict with L9
+" Plugin 'user/L9', {'name': 'newL9'}
 
 call vundle#end()            " required
 
