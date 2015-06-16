@@ -141,6 +141,9 @@ set foldlevel=99
 " Save on focus lost.
 :au FocusLost * :wa
 
+" TODO(samcliu): As of June 15, 2015 this isn't working correctly! Debug.
+" To check, compare the output of this command to `python --version`
+" :python import sys; print sys.version
 " Add the virtualenv's site-packages to vim path.
 if has('python')
 py << EOF

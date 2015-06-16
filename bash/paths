@@ -1,0 +1,5 @@
+# [MacPorts]
+export PATH="/opt/local/bin:/opt/local/sbin:$PATH"
+
+# [RVM] Add RVM to PATH for scripting
+export PATH="$PATH:$HOME/.rvm/bin" 

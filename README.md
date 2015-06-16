@@ -6,16 +6,21 @@ as configurations that are primarily geared toward Python & C/C++ programmers.
 
 ## Prereqs
   * zsh
-  * Python 2.6+
+  * python 2.7+
   * virtualenv
   * virtualenvwrapper
+  * rvm 1.26.11+
+  * MacPorts (not required but preferred over homebrew)
 
 ## Preferred Method
 Files that need personalizing:
-  * ~/.gitconfig
+  * For git: `~/.gitconfig`
+  * For aliases (bash and zsh use same file): `~/.oh-my-zsh/custom/aliases.zsh`
+  * For virtualenv in zsh: `~/.oh-my-zsh/custom/virtualenv.zsh`
 
 Install instructions:
-  * chsh -s /bin/zsh
+  * Install prereqs
+  * `chsh -s /bin/zsh`
   * git clone git@github.com:samliu/osxdotfiles.git ~/.dotfiles
   * cd ~/.dotfiles
   * python install.py
@@ -23,21 +28,10 @@ Install instructions:
 The install script symlinks each file in the dotfile folder to your home
 directory and prompts if an overwrite is going to happen.
 
-### Installing Ruby (if desired)
-I like to use RVM. TODO(samcliu): add info here.
-
-### Installing Python
-I use MacPorts over homebrew because it's historically been more reliable and 
-consistent for me. Since I use virtualenv and rvm to localize my scripting
-installs I don't require the system to have a super clean environment.
-
-  * sudo port install python27
-  * sudo port install py27-virtualenv
-  * sudo port install py27-virtualenvwrapper-
-  * mkdir ~/virtualenvs
-  * export WORKON_HOME=~/virtualenvs
-  * mkvirtualenv default
-  * add to zshrc the location for virtualenvwrapper.sh
-
-
-
+### Python Virtualenv
+I use MacPorts over Homebrew because it's historically been more reliable and 
+consistent for me. Since I use `virtualenv` and `rvm` to localize my scripting
+environments I don't require the system to have a super clean global 
+environment. See `~/.oh-my-zsh/custom/virtualenv.zsh` for how I usually 
+configure my virtualenvs. I've isolated all virtualenv conf to that file so if 
+you want to do it differently you can delete or modify just that file as needed.
