@@ -54,3 +54,16 @@ I think it should work just fine.
 In `~/.oh-my-zsh/custom/linux.zsh` I add some functionality for Linux users but
 this edition of the dotfiles hasn't yet been tested on Linux. I'd like to 
 eventually make these compatible.
+
+### command-t.vim & Ruby Version
+If you're using vim on OS X and rvm, you're likely to run into problems because
+Command-T requires vim to be built with ruby extensions and the ruby it uses
+needs to match the extension version.
+
+By default, on OS X ruby is located at 
+
+  /System/Library/Frameworks/Ruby.framework/Versions/Current/usr/bin/ruby
+
+You need to run `~/.vim/bundle/command-t/ruby/command-t/extconf.rb` using the
+system ruby (assuming your vim is also system vim), then run `make` in
+the `~/.vim/bundle/command-t/ruby/command-t` folder.
