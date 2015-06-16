@@ -8,9 +8,10 @@ filetype off
 
 " Vundle, plugin management for vim.
 set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+call vundle#begin("~/.vim/bundle")
 
 " INSERT VUNDLE PLUGINS HERE.
+
 
 call vundle#end()            " required
 
