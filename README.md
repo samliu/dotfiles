@@ -10,7 +10,8 @@ as configurations that are primarily geared toward Python & C/C++ programmers.
   * virtualenv
   * virtualenvwrapper
   * rvm 1.26.11+
-  * vim 7.3+ (mvim / gvim optional)
+  * ack 2.14+
+  * vim 7.3+ (mvim / gvim optional) w/ Ruby and Python extensions
   * MacPorts (not required but preferred over homebrew)
 
 ## Preferred Method
