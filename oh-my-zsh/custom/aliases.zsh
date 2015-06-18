@@ -12,3 +12,12 @@ alias psg="ps auxwwww | grep -v grep | grep"
 
 # [Personal] Code directory. (Assumes you put all your code in ~/code.)
 alias c="cd ~/code"
+
+# [System Info]
+if [[ "$OSTYPE" = darwin* ]]; then
+  alias sysinfo="sysctl -A"
+fi
+
+if [[ "$OSTYPE" = linux* ]]; then
+  alias sysinfo="sudo lshw -class system"
+fi
