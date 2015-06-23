@@ -1,6 +1,2 @@
-# Add zsh aliases. (Bash is a second-class citizen in these dotfiles, but
-# it is supported.)
+# Add zsh aliases. (Bash is a second-class citizen in these dotfiles.)
 . ~/.oh-my-zsh/lib/aliases.zsh
-
-# Changing directory to code project.
-function c { cd ~/code/$1; }

@@ -1,2 +1,8 @@
+# [PS1] Default shell cursor.
 export PS1="\w$ "
+
+# [EDITOR] What cmd to call when an editor is needed.
 export EDITOR="vim"
+
+# [TERMINAL] Colorize terminal.
+export CLICOLOR=1;

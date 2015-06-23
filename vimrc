@@ -7,10 +7,74 @@ set nocompatible
 filetype off
 
 " Vundle, plugin management for vim.
+" Vundle can install plugins from git repos, local, vim-scripts.org, etc.
+" Vundle has namespacing for installed plugins.
+" 
+" These dotfiles used to use Pathogen instead, but Vundle makes it easier to 
+" maintain / upgrade vim plugsin.
+" 
+" To install vundle plugins, launch `vim` and run `:PluginInstall`
+" To update vundle plugins, run :PluginUpdate
+
 set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+call vundle#begin("~/.vim/bundle")
 
 " INSERT VUNDLE PLUGINS HERE.
+
+" let Vundle manage Vundle, required
+Plugin 'gmarik/Vundle.vim'
+
+" vim-jedi - Autocompletion for Python
+Plugin 'davidhalter/jedi-vim'
+
+" vim-clang-format - Formatting C, C++, ObjC
+Plugin 'rhysd/vim-clang-format'
+
+" Command T - intuitive mechanism for opening files and buffers.
+Plugin 'wincent/command-t'
+
+" NERDTree
+Plugin 'scrooloose/nerdtree'
+
+" SnipMate
+Plugin 'vim-scripts/snipMate'
+
+" Surround
+Plugin 'tpope/vim-surround'
+
+" TODO(samcliu): Plugins I want to add:
+" 1. Command-T
+" 2. ClangTidy / ClangFormat
+" 3. NERDTree
+" 4. NERDCommenter
+" 5. SnipMate or similar to automatically insert boilerplate for new files of 
+" certain filetypes. E.g Python boilerplate for .py files.
+" 6. FuzzyFinderTextMate?
+" 7. Tim Pope's 'surround' which lets you quickly delete, change, and insert
+" surrounding characters in some text e.g remove all matching quotes, etc.
+" 8. ?
+
+" The following are examples of different formats supported.
+" Keep Plugin commands between vundle#begin/end.
+
+" plugin on GitHub repo
+" Plugin 'tpope/vim-fugitive'
+
+" plugin from http://vim-scripts.org/vim/scripts.html
+" Plugin 'L9'
+
+" Git plugin not hosted on GitHub
+" Plugin 'git://git.wincent.com/command-t.git'
+
+" git repos on your local machine (i.e. when working on your own plugin)
+" Plugin 'file:///home/gmarik/path/to/plugin'
+
+" The sparkup vim script is in a subdirectory of this repo called vim.
+" Pass the path to set the runtimepath properly.
+" Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
+
+" Avoid a name conflict with L9
+" Plugin 'user/L9', {'name': 'newL9'}
 
 call vundle#end()            " required
 
@@ -141,6 +205,9 @@ set foldlevel=99
 " Save on focus lost.
 :au FocusLost * :wa
 
+" TODO(samcliu): As of June 15, 2015 this isn't working correctly! Debug.
+" To check, compare the output of this command to `python --version`
+" :python import sys; print sys.version
 " Add the virtualenv's site-packages to vim path.
 if has('python')
 py << EOF
