@@ -19,19 +19,28 @@ as configurations that are primarily geared toward Python & C/C++ programmers.
 I use Google's vim-codefmt plugin to format my code automatically in vim. The
 plugin leverages code formatters, so you have to make sure they are installed.
 
-Python: Make sure your python environment is fully configured, then install
+#### Python
+Make sure your python environment is fully configured, then install
 `autopep8` using pip.
 
-```
+```bash
 pip install autopep8
 ```
 
-C/C++: Install clang-format, which should come with your clang install. Default
+#### C/C++
+Install clang-format, which should come with your clang install. Default
 OS X clang as of this writing does not include clang-format, so you have to get
 it yourself. Go to `http://clang.llvm.org/docs/ClangFormat.html` for downloads.
 
 I went to this page, downloaded the darwin prebuilt binaries, unzipped, then
 used `cp bin/clang-format /usr/bin/clang-format` to install the binary.
+
+#### HTML / Javascript / CSS
+Get [NPM](http://npmjs.com).
+
+```bash
+sudo npm install js-beautify -g
+```
 
 ## Preferred Method
 Files that need personalizing:
