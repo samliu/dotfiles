@@ -14,6 +14,26 @@ as configurations that are primarily geared toward Python & C/C++ programmers.
   * vim 7.3+ (mvim / gvim optional) w/ Ruby and Python extensions
   * MacPorts (not required but preferred over homebrew)
 
+### Code Formatting
+
+I use Google's vim-codefmt plugin to format my code automatically in vim. The
+plugin leverages code formatters, so you have to make sure they are installed.
+
+Python: Make sure your python environment is fully configured, then install
+`autopep8` using pip.
+
+```
+pip install autopep8
+```
+
+C/C++: Install clang-format, which should come with your clang install. Default
+OS X clang as of this writing does not include clang-format, so you have to get
+it yourself either via brew or manual compilation (MacPorts doesn't have it
+either, how annoying.)
+```
+http://clang.llvm.org/docs/ClangFormat.html
+```
+
 ## Preferred Method
 Files that need personalizing:
   * For git: `~/.gitconfig`

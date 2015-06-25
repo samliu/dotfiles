@@ -27,6 +27,12 @@ Plugin 'gmarik/Vundle.vim'
 " vim-jedi - Autocompletion for Python
 Plugin 'davidhalter/jedi-vim'
 
+" maktaba - Google's Vim plugin management software. Required for codefmt.
+Plugin 'google/vim-maktaba'
+
+" vim-codefmt - Formatting code courtesy of Google
+Plugin 'google/vim-codefmt'
+
 " vim-clang-format - Formatting C, C++, ObjC
 Plugin 'rhysd/vim-clang-format'
 
