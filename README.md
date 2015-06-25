@@ -25,7 +25,7 @@ Edit these files.
 ### Install
   * Install prereqs
   * `chsh -s /bin/zsh`
-  * git clone git@github.com:samliu/osxdotfiles.git ~/.dotfiles
+  * git clone git@github.com:samliu/dotfiles.git ~/.dotfiles
   * cd ~/.dotfiles
   * python install.py
   * Open vim, run `:PluginInstall` to install plugins with Vundle.
