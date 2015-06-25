@@ -43,22 +43,14 @@ Plugin 'wincent/command-t'
 Plugin 'scrooloose/nerdtree'
 
 " SnipMate
+" Automatically insert boilerplate for new files of certain filetypes. 
+" E.g Python boilerplate for .py files.
 Plugin 'vim-scripts/snipMate'
 
 " Surround
+" Lets you quickly delete, change, and insert surrounding characters in some 
+" text e.g remove all matching quotes, etc.
 Plugin 'tpope/vim-surround'
-
-" TODO(samcliu): Plugins I want to add:
-" 1. Command-T
-" 2. ClangTidy / ClangFormat
-" 3. NERDTree
-" 4. NERDCommenter
-" 5. SnipMate or similar to automatically insert boilerplate for new files of 
-" certain filetypes. E.g Python boilerplate for .py files.
-" 6. FuzzyFinderTextMate?
-" 7. Tim Pope's 'surround' which lets you quickly delete, change, and insert
-" surrounding characters in some text e.g remove all matching quotes, etc.
-" 8. ?
 
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
@@ -236,6 +228,9 @@ com! FormatJSON %!python -m json.tool
 set textwidth=80
 set cc=80
 
-" Normal mode `ctrl+\` should run code format if applicable,
-" word wrap if in markdown file.
-:nnoremap <c-\> gqG
+" Normal mode `ctrl+\` should run code format if applicable
+:nnoremap <c-\> :FormatCode
+
+" `APPLE/WIN+\` should reflow word wrap.
+" TODO(samcliu): Fix this, it doesn't work correctly.
+" :nnoremap <D-\> gqG
