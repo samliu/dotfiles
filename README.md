@@ -14,7 +14,26 @@ as configurations that are primarily geared toward Python & C/C++ programmers.
   * vim 7.3+ (mvim / gvim optional) w/ Ruby and Python extensions
   * MacPorts (not required but preferred over homebrew)
 
-### Code Formatting
+## Installation
+
+### Personalize
+Edit these files.
+  * For git: `~/.gitconfig`
+  * For aliases (bash and zsh use same file): `~/.oh-my-zsh/custom/aliases.zsh`
+  * For virtualenv in zsh: `~/.oh-my-zsh/custom/virtualenv.zsh`
+
+### Install
+  * Install prereqs
+  * `chsh -s /bin/zsh`
+  * git clone git@github.com:samliu/osxdotfiles.git ~/.dotfiles
+  * cd ~/.dotfiles
+  * python install.py
+  * Open vim, run `:PluginInstall` to install plugins with Vundle.
+
+The install script symlinks each file in the dotfile folder to your home
+directory and prompts if an overwrite is going to happen.
+
+### Code Formatters for Vim
 
 I use Google's vim-codefmt plugin to format my code automatically in vim. The
 plugin leverages code formatters, so you have to make sure they are installed.
@@ -42,22 +61,6 @@ Get [NPM](http://npmjs.com).
 sudo npm install js-beautify -g
 ```
 
-## Preferred Method
-Files that need personalizing:
-  * For git: `~/.gitconfig`
-  * For aliases (bash and zsh use same file): `~/.oh-my-zsh/custom/aliases.zsh`
-  * For virtualenv in zsh: `~/.oh-my-zsh/custom/virtualenv.zsh`
-
-Install instructions:
-  * Install prereqs
-  * `chsh -s /bin/zsh`
-  * git clone git@github.com:samliu/osxdotfiles.git ~/.dotfiles
-  * cd ~/.dotfiles
-  * python install.py
-  * Open vim, run `:PluginInstall` to install plugins with Vundle.
-
-The install script symlinks each file in the dotfile folder to your home
-directory and prompts if an overwrite is going to happen.
 
 ### Python Virtualenv
 I use MacPorts over Homebrew because it's historically been more reliable and 
