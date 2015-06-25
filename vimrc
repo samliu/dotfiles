@@ -196,6 +196,7 @@ set backspace=indent,eol,start
 " if you so desire.
 imap jj <Esc>
 
+
 " Folding. Use indents to determine folds, Don't fold files on opening by
 " default.
 set foldmethod=indent
@@ -224,3 +225,11 @@ endif
 
 " Json Formatting
 com! FormatJSON %!python -m json.tool
+
+" Column 80
+set textwidth=80
+set cc=80
+
+" Normal mode `ctrl+\` should run code format if applicable,
+" word wrap if in markdown file.
+:nnoremap <c-\> gqG
