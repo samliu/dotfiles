@@ -70,6 +70,17 @@ environment. See `~/.oh-my-zsh/custom/virtualenv.zsh` for how I usually
 configure my virtualenvs. I've isolated all virtualenv conf to that file so if 
 you want to do it differently you can delete or modify just that file as needed.
 
+Warning: When using MacPorts to install python, also use MacPorts to install
+the corresponding `virtualenv` and `virtualenvwrapper` instead of pip. So do
+this:
+
+```
+sudo port install python27 py27-virtualenv py27-virtualenvwrapper
+```
+
+If you don't do this and use pip instead the virtualenv installation location is
+in your `site-packages` and is just more gnarly to handle. This can all be
+configured within `~/.oh-my-zsh/custom/virtualenv.zsh`
 
 ## Potential Knots
 
