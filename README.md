@@ -28,11 +28,10 @@ pip install autopep8
 
 C/C++: Install clang-format, which should come with your clang install. Default
 OS X clang as of this writing does not include clang-format, so you have to get
-it yourself either via brew or manual compilation (MacPorts doesn't have it
-either, how annoying.)
-```
-http://clang.llvm.org/docs/ClangFormat.html
-```
+it yourself. Go to `http://clang.llvm.org/docs/ClangFormat.html` for downloads.
+
+I went to this page, downloaded the darwin prebuilt binaries, unzipped, then
+used `cp bin/clang-format /usr/bin/clang-format` to install the binary.
 
 ## Preferred Method
 Files that need personalizing:
