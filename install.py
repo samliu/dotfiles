@@ -43,13 +43,15 @@ class DotfileInstaller(object):
         dotfile_fullpath = self.homedir + '/' + dotfile_name
         cmd = 'ln -s "{0}/{1}" "{2}"'.format(self.currdir, filename,
                                              dotfile_fullpath)
-        if os.path.isfile(dotfile_fullpath) or os.path.isdir(dotfile_fullpath):
-            import time
-            last_modified_time = str(
-                time.ctime(os.stat(dotfile_fullpath).st_mtime))
-            self.colorprinter.println(dotfile_fullpath +
-                                      " exists and was last modified at " +
-                                      last_modified_time, color="OKGREEN")
+        if (os.path.isfile(dotfile_fullpath) or os.path.isdir(dotfile_fullpath)
+                or os.path.islink(dotfile_fullpath)):
+            if not os.path.islink(dotfile_fullpath):
+                import time
+                last_modified_time = str(
+                    time.ctime(os.stat(dotfile_fullpath).st_mtime))
+                self.colorprinter.println(dotfile_fullpath +
+                                          " exists and was last modified at " +
+                                          last_modified_time, color="OKGREEN")
             user_response = raw_input(
                 'overwrite ' + dotfile_fullpath + '? (y/n)')
             if user_response not in ['y']:
