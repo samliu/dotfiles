@@ -29,3 +29,16 @@ plugins=(git)
 
 # [oh-my-zsh] Initializes oh-my-zsh.
 source $ZSH/oh-my-zsh.sh
+
+# Colors for ls.
+if [[ -x "`whence -p dircolors`" ]]; then
+  eval `dircolors`
+  alias ls='ls -F --color=auto'
+else
+  alias ls='ls -F'
+fi
+
+# User-level MOTD if it exists.
+if [ -f "/usr/local/bin/dynmotd" ] ; then
+    zsh /usr/local/bin/dynmotd
+fi
