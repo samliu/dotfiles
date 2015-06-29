@@ -228,8 +228,19 @@ com! FormatJSON %!python -m json.tool
 set textwidth=80
 set cc=80
 
-" Normal mode `ctrl+\` should run code format if applicable
-:nnoremap <c-\> :FormatCode
+" Put custom aliases here!
+" Help to write a custom alias (since looking it up sucks):
+" Basic commands are :map and :noremap. 
+" - :map is recursive, so `:map j gg` and `:map Q j` will result in gg if you
+"   press Q.
+" - :noremap means 'no recursion map' so the same commands above with noremap
+"   results in Q mapping to the command j but it doesn't expand it.
+" - :nnoremap means noremap in Normal Mode. There are equivalents in each of the
+"   other vim modes (e.g vnoremap is for visual mode)...generally these are the
+"   only two modes you'll probably want.
+
+" Alias normal mode `ctrl+l` should run code format if applicable.
+:nnoremap <c-l> :FormatCode<ENTER>
 
 " `APPLE/WIN+\` should reflow word wrap.
 " TODO(samcliu): Fix this, it doesn't work correctly.
