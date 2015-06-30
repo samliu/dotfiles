@@ -143,7 +143,7 @@ endif
 map <leader>f :NERDTree<CR>
 
 " Colorscheme.
-colorscheme koehler
+colorscheme lucid
 
 " Syntax highlighting on.
 syntax on
