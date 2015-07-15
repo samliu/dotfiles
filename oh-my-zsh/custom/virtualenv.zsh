@@ -19,13 +19,14 @@ export WORKON_HOME=~/virtualenvs
 
 # Which python to use for virtualenvwrapper. If you're using MacPorts like me,
 # this should be the MacPorts python, not the system python.
-# VIRTUALENVWRAPPER_PYTHON=/opt/local/bin/python 
+#
+#export VIRTUALENVWRAPPER_PYTHON=/opt/local/bin/python 
 
 # Which virtualenv the virtualenvwrapper should use.
-# export VIRTUALENVWRAPPER_VIRTUALENV=/opt/local/bin/virtualenv-2.7
+# export VIRTUALENVWRAPPER_VIRTUALENV=/usr/local/bin/virtualenv
 
 # Activate virtualenvwrapper.
-source /usr/local/bin/virtualenvwrapper.sh
+source virtualenvwrapper.sh
 
 # Example of how to make the virtualenv:
 # `mkvirtualenv test1`

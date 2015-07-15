@@ -21,9 +21,6 @@ call vundle#begin("~/.vim/bundle")
 
 " INSERT VUNDLE PLUGINS HERE.
 
-" let Vundle manage Vundle, required
-Plugin 'gmarik/Vundle.vim'
-
 " vim-jedi - Autocompletion for Python
 Plugin 'davidhalter/jedi-vim'
 
@@ -52,27 +49,11 @@ Plugin 'vim-scripts/snipMate'
 " text e.g remove all matching quotes, etc.
 Plugin 'tpope/vim-surround'
 
-" The following are examples of different formats supported.
-" Keep Plugin commands between vundle#begin/end.
-
-" plugin on GitHub repo
-" Plugin 'tpope/vim-fugitive'
-
-" plugin from http://vim-scripts.org/vim/scripts.html
-" Plugin 'L9'
-
-" Git plugin not hosted on GitHub
-" Plugin 'git://git.wincent.com/command-t.git'
-
-" git repos on your local machine (i.e. when working on your own plugin)
-" Plugin 'file:///home/gmarik/path/to/plugin'
-
-" The sparkup vim script is in a subdirectory of this repo called vim.
-" Pass the path to set the runtimepath properly.
-" Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
-
-" Avoid a name conflict with L9
-" Plugin 'user/L9', {'name': 'newL9'}
+" vim-scrollbar
+" Creates a left-aligned scrollbar in each buffer. Toggle on/off via <leader>sb.
+" This plugin is a tad slow, so I generally keep it off unless I really want to
+" visually know where I am in a big file.
+Plugin 'samliu/vim-scrollbar', {'name': 'sam-vim-scrollbar'}
 
 call vundle#end()            " required
 
