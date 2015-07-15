@@ -54,7 +54,8 @@ Plugin 'tpope/vim-surround'
 
 " Scrollbar
 " Displays a scrollbar to the left using curses. Toggle on/off with leader+sb.
-Plugin 'samliu/vim-scrollbar'
+" Plugin 'samliu/vim-scrollbar'
+"highlight Scrollbar_Thumb ctermfg=blue   ctermbg=blue guifg=blue   guibg=black cterm=reverse
 
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
