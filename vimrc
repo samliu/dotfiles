@@ -52,6 +52,10 @@ Plugin 'vim-scripts/snipMate'
 " text e.g remove all matching quotes, etc.
 Plugin 'tpope/vim-surround'
 
+" Scrollbar
+" Displays a scrollbar to the left using curses. Toggle on/off with leader+sb.
+Plugin 'samliu/vim-scrollbar'
+
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
 
