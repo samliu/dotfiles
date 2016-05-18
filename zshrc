@@ -1,6 +1,9 @@
 # [LOCALCONF] Use local configs if they exist.
 if [[ -s $HOME/.localrc ]] ; then source $HOME/.localrc ; fi
 
+# [Golang] Use go config if it exists.
+if [[ -s $HOME/.golangrc ]] ; then source $HOME/.golangrc ; fi
+
 # [RVM] Load RVM into a shell session *as a function*
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" 
 
@@ -27,6 +30,8 @@ export ZSH_THEME="arrow"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 plugins=(git)
 
+export DISABLE_AUTO_UPDATE=true
+
 # [oh-my-zsh] Initializes oh-my-zsh.
 source $ZSH/oh-my-zsh.sh
 
@@ -42,3 +47,8 @@ fi
 if [ -f "/usr/local/bin/dynmotd" ] ; then
     zsh /usr/local/bin/dynmotd
 fi
+
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+
+# Markdown Converter
+alias markdown="nodejs /home/samliu/public_html/shanu/node_modules/markdown-to-html/bin/markdown"
