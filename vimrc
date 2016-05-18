@@ -1,3 +1,7 @@
+if $COLORTERM == 'gnome-terminal'
+    set t_Co=256
+endif
+
 " Unset compatibility mode for vi. Needed for vundle.
 set nocompatible
 
@@ -30,6 +34,9 @@ Plugin 'google/vim-maktaba'
 " vim-codefmt - Formatting code courtesy of Google
 Plugin 'google/vim-codefmt'
 
+" vim-go - Go vim plugins.
+Plugin 'fatih/vim-go'
+
 " vim-clang-format - Formatting C, C++, ObjC
 Plugin 'rhysd/vim-clang-format'
 
@@ -53,7 +60,7 @@ Plugin 'tpope/vim-surround'
 " Creates a left-aligned scrollbar in each buffer. Toggle on/off via <leader>sb.
 " This plugin is a tad slow, so I generally keep it off unless I really want to
 " visually know where I am in a big file.
-Plugin 'samliu/vim-scrollbar', {'name': 'sam-vim-scrollbar'}
+" Plugin 'samliu/vim-scrollbar', {'name': 'sam-vim-scrollbar'}
 
 call vundle#end()            " required
 

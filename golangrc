@@ -1,0 +1,3 @@
+# Gopath and other golang settings here.
+export GOPATH=$HOME/code/gocode
+export PATH=$PATH:$GOPATH/bin

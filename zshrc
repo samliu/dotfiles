@@ -1,6 +1,9 @@
 # [LOCALCONF] Use local configs if they exist.
 if [[ -s $HOME/.localrc ]] ; then source $HOME/.localrc ; fi
 
+# [Golang] Use go config if it exists.
+if [[ -s $HOME/.golangrc ]] ; then source $HOME/.golangrc ; fi
+
 # [RVM] Load RVM into a shell session *as a function*
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" 
 
@@ -16,7 +19,7 @@ export ZSH_THEME="arrow"
 # export CASE_SENSITIVE="true"
 
 # [oh-my-zsh] Comment this out to disable weekly auto-update checks
-# export DISABLE_AUTO_UPDATE="true"
+export DISABLE_AUTO_UPDATE="true"
 
 # [oh-my-zsh] Uncomment following line if you want to disable colors in ls
 # export DISABLE_LS_COLORS="true"
@@ -27,10 +30,13 @@ export ZSH_THEME="arrow"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 plugins=(git)
 
+export DISABLE_AUTO_UPDATE=true
+
 # [oh-my-zsh] Initializes oh-my-zsh.
 source $ZSH/oh-my-zsh.sh
 
 # Colors for ls.
+export CLICOLOR=1
 if [[ -x "`whence -p dircolors`" ]]; then
   eval `dircolors`
   alias ls='ls -F --color=auto'
@@ -42,3 +48,5 @@ fi
 if [ -f "/usr/local/bin/dynmotd" ] ; then
     zsh /usr/local/bin/dynmotd
 fi
+
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
