@@ -1,5 +1,5 @@
 if [ $UID -eq 0 ]; then NCOLOR="red"; else NCOLOR="yellow"; fi
-HCOLOR="green"
+HCOLOR="cyan"
 
 PROMPT='%{$fg[$NCOLOR]%}%c ➤ %{$reset_color%}'
 RPROMPT='%{$fg[$NCOLOR]%}%p $(git_prompt_info)%{$reset_color%}'
