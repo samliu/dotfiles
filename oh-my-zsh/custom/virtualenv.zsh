@@ -26,7 +26,11 @@ export WORKON_HOME=~/virtualenvs
 # export VIRTUALENVWRAPPER_VIRTUALENV=/usr/local/bin/virtualenv
 
 # Activate virtualenvwrapper.
-source virtualenvwrapper.sh
+virtualenvwrappersh_location=`which virtualenvwrapper.sh`
+if [ -n $virtualenvwrappersh_location ]; then
+    source $virtualenvwrappersh_location
+else
+fi
 
 # Example of how to make the virtualenv:
 # `mkvirtualenv test1`

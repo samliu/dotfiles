@@ -19,7 +19,7 @@ export ZSH_THEME="arrow"
 # export CASE_SENSITIVE="true"
 
 # [oh-my-zsh] Comment this out to disable weekly auto-update checks
-# export DISABLE_AUTO_UPDATE="true"
+export DISABLE_AUTO_UPDATE="true"
 
 # [oh-my-zsh] Uncomment following line if you want to disable colors in ls
 # export DISABLE_LS_COLORS="true"
@@ -36,6 +36,7 @@ export DISABLE_AUTO_UPDATE=true
 source $ZSH/oh-my-zsh.sh
 
 # Colors for ls.
+export CLICOLOR=1
 if [[ -x "`whence -p dircolors`" ]]; then
   eval `dircolors`
   alias ls='ls -F --color=auto'
@@ -49,6 +50,3 @@ if [ -f "/usr/local/bin/dynmotd" ] ; then
 fi
 
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
-
-# Markdown Converter
-alias markdown="nodejs /home/samliu/public_html/shanu/node_modules/markdown-to-html/bin/markdown"
