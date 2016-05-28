@@ -50,3 +50,12 @@ if [ -f "/usr/local/bin/dynmotd" ] ; then
 fi
 
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+
+# I create a folder called .npm-global and set it to be my npm install path.
+# That way, I can install npm packages without giving privileges, and keep my
+# local state nice and clean.
+#
+#  mkdir ~/.npm-global
+#  npm config set prefix '~/.npm-global'
+#
+export PATH=~/.npm-global/bin:$PATH
