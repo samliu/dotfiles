@@ -15,13 +15,13 @@ export ZSH=$HOME/.oh-my-zsh
 # export ZSH_THEME="robbyrussell"
 export ZSH_THEME="arrow"
 
-# [oh-my-zsh] Set to this to use case-sensitive completion
+# [oh-my-zsh] Set to this to use case-sensitive completion.
 # export CASE_SENSITIVE="true"
 
-# [oh-my-zsh] Comment this out to disable weekly auto-update checks
+# [oh-my-zsh] Comment this out to disable weekly auto-update checks.
 export DISABLE_AUTO_UPDATE="true"
 
-# [oh-my-zsh] Uncomment following line if you want to disable colors in ls
+# [oh-my-zsh] Uncomment following line if you want to disable colors in ls.
 # export DISABLE_LS_COLORS="true"
 
 # [oh-my-zsh] Which plugins would you like to load? (plugins can be found in 
@@ -49,7 +49,13 @@ if [ -f "/usr/local/bin/dynmotd" ] ; then
     zsh /usr/local/bin/dynmotd
 fi
 
-export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+# Add RVM to PATH for scripting.
+export PATH="$PATH:$HOME/.rvm/bin"
+
+# Add go bin to $PATH. Godoc gets installed here, for example.
+#
+# `sudo -E go get golang.org/x/tools/cmd/godoc`
+export PATH=/usr/lib/go/bin/:$PATH
 
 # I create a folder called .npm-global and set it to be my npm install path.
 # That way, I can install npm packages without giving privileges, and keep my
@@ -57,5 +63,4 @@ export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 #
 #  mkdir ~/.npm-global
 #  npm config set prefix '~/.npm-global'
-#
 export PATH=~/.npm-global/bin:$PATH

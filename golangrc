@@ -1,3 +1,20 @@
 # Gopath and other golang settings here.
 export GOPATH=$HOME/code/gocode
 export PATH=$PATH:$GOPATH/bin
+
+# Other potential options.
+# export GOARCH="amd64"
+# export GOBIN=""
+# export GOEXE=""
+# export GOHOSTARCH="amd64"
+# export GOHOSTOS="linux"
+# export GOOS="linux"
+# export GOPATH=$HOME/code/gocode
+# export GORACE=""
+# export GOROOT="/usr/lib/go"
+# export GOTOOLDIR="/usr/lib/go/pkg/tool/linux_amd64"
+# export GO15VENDOREXPERIMENT=""
+# export CC="gcc"
+# export GOGCCFLAGS="-fPIC -m64 -pthread -fmessage-length=0"
+# export CXX="g++"
+# export CGO_ENABLED="1"
