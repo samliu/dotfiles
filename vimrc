@@ -1,6 +1,7 @@
-if $COLORTERM == 'gnome-terminal'
-    set t_Co=256
-endif
+" if $COLORTERM == 'gnome-terminal'
+"     set t_Co=256
+" endif
+set t_Co=256
 
 " Unset compatibility mode for vi. Needed for vundle.
 set nocompatible
@@ -13,10 +14,10 @@ filetype off
 " Vundle, plugin management for vim.
 " Vundle can install plugins from git repos, local, vim-scripts.org, etc.
 " Vundle has namespacing for installed plugins.
-" 
-" These dotfiles used to use Pathogen instead, but Vundle makes it easier to 
+"
+" These dotfiles used to use Pathogen instead, but Vundle makes it easier to
 " maintain / upgrade vim plugsin.
-" 
+"
 " To install vundle plugins, launch `vim` and run `:PluginInstall`
 " To update vundle plugins, run :PluginUpdate
 
@@ -47,14 +48,17 @@ Plugin 'wincent/command-t'
 Plugin 'scrooloose/nerdtree'
 
 " SnipMate
-" Automatically insert boilerplate for new files of certain filetypes. 
+" Automatically insert boilerplate for new files of certain filetypes.
 " E.g Python boilerplate for .py files.
 Plugin 'vim-scripts/snipMate'
 
 " Surround
-" Lets you quickly delete, change, and insert surrounding characters in some 
+" Lets you quickly delete, change, and insert surrounding characters in some
 " text e.g remove all matching quotes, etc.
 Plugin 'tpope/vim-surround'
+
+" Better Whitespace Highlighting
+Plugin 'ntpeters/vim-better-whitespace'
 
 " vim-scrollbar
 " Creates a left-aligned scrollbar in each buffer. Toggle on/off via <leader>sb.
@@ -77,7 +81,7 @@ filetype plugin indent on    " required
 " see :h vundle for more details or wiki for FAQ.
 " Put your non-Plugin stuff after this line.
 
-" START SAM'S VIM CONFIGS 
+" START SAM'S VIM CONFIGS
 
 " When you set showcmd in your vimrc, the bottom line in your editor will show
 " you information about the current command going on.
@@ -164,14 +168,16 @@ set cursorline
 set number
 
 " Show invisible characters (whitespace, tab, etc).
-set list
+" set list
 
 " What to display in place of invisible characters.
 set listchars=tab:▸\ ,eol:¬
 
 " Invisible character highlighting.
-highlight NonText guifg=#4a4a59
-highlight SpecialKey guifg=#4a4a5
+" highlight NonText guifg=#4a4a59
+" highlight SpecialKey guifg=#4a4a5
+" The following alternative may be less obtrusive.
+highlight ExtraWhitespace ctermbg=darkgreen guibg=lightgreen
 
 " Backspace works in Insert mode (e.g. not inserting a ^?), but won't delete
 " over line breaks, or automatically-inserted indentation, or the place where
