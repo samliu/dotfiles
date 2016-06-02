@@ -1,8 +1,20 @@
 # Sam's Dot files
 
-These used to be based on Ryan Bates' dotfiles but have since evolved. I've
-removed the ruby dependency and included my own python install script, as well
-as configurations that are primarily geared toward Python & C/C++ programmers.
+Configurations are primarily geared toward Python, Go, and C/C++ programmers.
+Ruby dependencies or support is an artifact of the past and is possibly
+outdated.
+
+Main benefits
+
+* Vim settings using oh-my-zsh and a small bunch of very helpful plugins with
+  sensible defaults.
+* Python is run through virtualenv by default in a workspace called default.
+  This lets you use more virtualenvs if you'd like, but if you're like me it's
+  more likely that you want 1 virtual space where you can `pip install` without
+  super user privileges and keep the system's python nice and clean.
+* Irssi is set to log and has some sensible defaults as well.
+* Gitconfig makes config'ing git easy per machine.
+* ZSH theme is no-nonsense. Shows hostname, python environment, git repo.
 
 ## Prereqs
   * zsh
@@ -10,24 +22,27 @@ as configurations that are primarily geared toward Python & C/C++ programmers.
   * virtualenv
   * virtualenvwrapper
   * rvm 1.26.11+
-  * ack 2.14+
+  * ack 2.14+ (note: you may want to use silver searcher instead, I heard it's
+    good)
   * vim 7.3+ (mvim / gvim optional) w/ Ruby and Python extensions
-  * MacPorts (not required but preferred over homebrew)
+  * If osx, probably MacPorts (not required but I prefer it over homebrew)
 
 ## Installation
 
 ### Personalize
 Edit these files.
   * For git: `~/.gitconfig`
+  * For irssi: `<dotfiles dir>/irssi/config` replace `samliu` with your
+    username.
   * For aliases (bash and zsh use same file): `~/.oh-my-zsh/custom/aliases.zsh`
   * For virtualenv in zsh: `~/.oh-my-zsh/custom/virtualenv.zsh`
 
 ### Install
   * Install prereqs
-  * `chsh -s /bin/zsh`
+  * Set zsh to be your default shell: `sudo chsh -s /bin/zsh`
   * git clone git@github.com:samliu/dotfiles.git ~/.dotfiles
   * cd ~/.dotfiles
-  * python install.py
+  * `python install.py` -- follow prompts.
   * Open vim, run `:PluginInstall` to install plugins with Vundle.
 
 The install script symlinks each file in the dotfile folder to your home
@@ -94,9 +109,8 @@ comments for MacPorts. I haven't tried installing these with Homebrew, though
 I think it should work just fine.
 
 ### Linux vs OSX
-In `~/.oh-my-zsh/custom/linux.zsh` I add some functionality for Linux users but
-this edition of the dotfiles hasn't yet been tested on Linux. I'd like to 
-eventually make these compatible.
+In `~/.oh-my-zsh/custom/linux.zsh` I add some functionality for Linux users. I
+actually use these dotfiles on 3 Ubuntu machines and 2 Macbook Pros.
 
 ### command-t.vim & Ruby Version
 If you're using vim on OS X and rvm, you're likely to run into problems because
