@@ -5,14 +5,6 @@
 # Ignore swap files.
 *.swp
 
-# Ignore npm global packages.
-/npm-global/*
-
-# Ignore vim plugins installed except Vundle and maktaba.
-/vim/bundle/*
-!/vim/bundle/Vundle.vim/*
-!/vim/bundle/vim-maktaba/*
-
 # Ignore OS junk files.
 [Tt]humbs.db
 *.DS_Store
