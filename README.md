@@ -125,3 +125,7 @@ By default, on OS X ruby is located at
 You need to run `~/.vim/bundle/command-t/ruby/command-t/extconf.rb` using the
 system ruby (assuming your vim is also system vim), then run `make` in
 the `~/.vim/bundle/command-t/ruby/command-t` folder.
+
+## oh-my-zsh didn't initialize
+
+Run `git submodule update --init` because the oh-my-zsh is a git submodule.
