@@ -1,0 +1,10 @@
+localrc
+vim/.netrwhist
+
+# Ignore npm global packages.
+/npm-global/*
+
+# Ignore vim plugins installed except Vundle and maktaba.
+/vim/bundle/*
+!/vim/bundle/Vundle.vim/*
+!/vim/bundle/vim-maktaba/*
