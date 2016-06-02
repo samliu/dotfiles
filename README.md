@@ -1,10 +1,10 @@
 # Sam's Dot files
 
-Configurations are primarily geared toward Python, Go, and C/C++ programmers.
-Ruby dependencies or support is an artifact of the past and is possibly
-outdated.
+Configurations are primarily geared toward Python, Go, Javascript, and
+C/C++ programmers. Ruby dependencies or support is an artifact of the past and
+is possibly outdated. I don't write much Java either.
 
-Main benefits
+## Main benefits
 
 * Vim settings using oh-my-zsh and a small bunch of very helpful plugins with
   sensible defaults.
@@ -15,16 +15,17 @@ Main benefits
 * Irssi is set to log and has some sensible defaults as well.
 * Gitconfig makes config'ing git easy per machine.
 * ZSH theme is no-nonsense. Shows hostname, python environment, git repo.
+* npm defaults installs to userland as well. `npm install -g js-beautify`
 
 ## Prereqs
   * zsh
   * python 2.7+
   * virtualenv
   * virtualenvwrapper
-  * rvm 1.26.11+
   * ack 2.14+ (note: you may want to use silver searcher instead, I heard it's
     good)
   * vim 7.3+ (mvim / gvim optional) w/ Ruby and Python extensions
+  * npm
   * If osx, probably MacPorts (not required but I prefer it over homebrew)
 
 ## Installation
@@ -73,7 +74,7 @@ used `cp bin/clang-format /usr/bin/clang-format` to install the binary.
 Get [NPM](http://npmjs.com).
 
 ```bash
-sudo npm install js-beautify -g
+npm install js-beautify -g
 ```
 
 
