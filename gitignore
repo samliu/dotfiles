@@ -1,6 +1,50 @@
 .DS_Store
 .svn
 *~
+
+# Ignore swap files.
 *.swp
-/npm-global
-/vim/bundle
+
+# Ignore npm global packages.
+/npm-global/*
+
+# Ignore vim plugins installed except Vundle and maktaba.
+/vim/bundle/*
+!/vim/bundle/Vundle.vim/*
+!/vim/bundle/vim-maktaba/*
+
+# Ignore OS junk files.
+[Tt]humbs.db
+*.DS_Store
+
+# Ignore Visual Studio junk files.
+*.[Oo]bj
+*.user
+*.aps
+*.pch
+*.vspscc
+*.vssscc
+*_i.c
+*_p.c
+*.ncb
+*.suo
+*.tlb
+*.tlh
+*.bak
+*.[Cc]ache
+*.ilk
+*.log
+*.lib
+*.sbr
+*.sdf
+ipch/
+obj/
+[Bb]in
+[Dd]ebug*/
+[Rr]elease*/
+Ankh.NoLoad
+
+# Tooling.
+_ReSharper*/
+*.resharper
+[Tt]est[Rr]esult*
