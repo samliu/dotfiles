@@ -4,7 +4,11 @@ vim/.netrwhist
 # Ignore npm global packages.
 /npm-global/*
 
-# Ignore vim plugins installed except Vundle and maktaba.
+# Ignore vim plugins installed except Vundle.
 /vim/bundle/*
+/vim/bundle/vim-*
 !/vim/bundle/Vundle.vim/*
-!/vim/bundle/vim-maktaba/*
+
+.DS_Store
+[Tt]humbs.db
+*.swp
