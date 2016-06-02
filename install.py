@@ -36,6 +36,13 @@ class DotfileInstaller(object):
                          if not word in self.ignore_files]
         self.colorprinter = ColorPrinter()
 
+        # Pull submodule dependencies.
+        print "Updating submodules..."
+        cmd = 'git submodule update --init'
+        os.system(cmd)
+        print "Git submodules updated."
+
+
     def link_file(self, filename):
         """Generate symlink in home directory of the user for the dotfile."""
         dotfile_name = '.' + filename
