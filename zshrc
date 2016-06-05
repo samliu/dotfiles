@@ -5,7 +5,7 @@ if [[ -s $HOME/.localrc ]] ; then source $HOME/.localrc ; fi
 if [[ -s $HOME/.golangrc ]] ; then source $HOME/.golangrc ; fi
 
 # [RVM] Load RVM into a shell session *as a function*
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" 
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
 # [oh-my-zsh] Path to your oh-my-zsh configuration.
 export ZSH=$HOME/.oh-my-zsh
@@ -18,18 +18,16 @@ export ZSH_THEME="arrow-samcliu"
 # export CASE_SENSITIVE="true"
 
 # [oh-my-zsh] Comment this out to disable weekly auto-update checks.
-export DISABLE_AUTO_UPDATE="true"
+export DISABLE_AUTO_UPDATE="false"
 
 # [oh-my-zsh] Uncomment following line if you want to disable colors in ls.
 # export DISABLE_LS_COLORS="true"
 
-# [oh-my-zsh] Which plugins would you like to load? (plugins can be found in 
+# [oh-my-zsh] Which plugins would you like to load? (plugins can be found in
 # ~/.oh-my-zsh/plugins/*)
 #
 # Example format: plugins=(rails git textmate ruby lighthouse)
 plugins=(git)
-
-export DISABLE_AUTO_UPDATE=true
 
 # [oh-my-zsh] Initializes oh-my-zsh.
 source $ZSH/oh-my-zsh.sh
