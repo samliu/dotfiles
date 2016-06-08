@@ -80,30 +80,11 @@ npm install js-beautify -g
 ```
 
 
-### Python Virtualenv
-I use MacPorts over Homebrew because it's historically been more reliable and 
-consistent for me. Since I use `virtualenv` and `rvm` to localize my scripting
-environments I don't require the system to have a super clean global 
-environment. See `~/.oh-my-zsh/custom/virtualenv.zsh` for how I usually 
-configure my virtualenvs. I've isolated all virtualenv conf to that file so if 
-you want to do it differently you can delete or modify just that file as needed.
-
-Warning: When using MacPorts to install python, also use MacPorts to install
-the corresponding `virtualenv` and `virtualenvwrapper` instead of pip. So do
-this:
-
-```
-sudo port install python27 py27-virtualenv py27-virtualenvwrapper
-```
-
-If you don't do this and use pip instead the virtualenv installation location is
-in your `site-packages` and is just more gnarly to handle. This can all be
-configured within `~/.oh-my-zsh/custom/virtualenv.zsh`
 
 ## Potential Knots
 
 ### Vim Python + Virtualenv
-Some vim plugins use python but you need to make sure vim is using your python 
+Some vim plugins use python but you need to make sure vim is using your python
 of choice, whether it is through virtualenv or the system.
 
 ### MacPorts vs Homebrew
@@ -120,13 +101,34 @@ If you're using vim on OS X and rvm, you're likely to run into problems because
 Command-T requires vim to be built with ruby extensions and the ruby it uses
 needs to match the extension version.
 
-By default, on OS X ruby is located at 
+By default, on OS X ruby is located at:
 
   /System/Library/Frameworks/Ruby.framework/Versions/Current/usr/bin/ruby
 
 You need to run `~/.vim/bundle/command-t/ruby/command-t/extconf.rb` using the
 system ruby (assuming your vim is also system vim), then run `make` in
 the `~/.vim/bundle/command-t/ruby/command-t` folder.
+
+### Python Virtualenv in OS X
+
+I use MacPorts over Homebrew because it's historically been more reliable and
+consistent for me. Since I use `virtualenv` and `rvm` to localize my scripting
+environments, I don't require the system to have a super clean global
+environment. See `~/.oh-my-zsh/custom/virtualenv.zsh` for how I usually
+configure my virtualenvs. I've isolated all virtualenv conf to that file so if
+you want to do it differently you can delete or modify just that file as needed.
+
+Warning: When using MacPorts to install python, also use MacPorts to install
+the corresponding `virtualenv` and `virtualenvwrapper` instead of pip. So do
+this:
+
+```
+sudo port install python27 py27-virtualenv py27-virtualenvwrapper
+```
+
+If you don't do this and use pip instead, the virtualenv installation location
+will be in your `site-packages` and is just more gnarly to handle. This can all
+be configured within `~/.oh-my-zsh/custom/virtualenv.zsh`
 
 ## oh-my-zsh didn't initialize
 
