@@ -16,6 +16,11 @@
 #
 ###############################################################################
 
+# Virtualenv: for managing python versions & keeping system python pristine.
+# virtualenv==13.0.3
+# virtualenv-clone==0.2.5
+# virtualenvwrapper==4.6.0
+
 # Ensure that you write PEP8-compliant python.
 autopep8>=1.1.1
 pep8>=1.6.2
@@ -40,8 +45,31 @@ httpie>=0.9.3
 # Use python to inspect network traffic.
 pcapy>=0.10.9
 scapy>=2.3.1
+dnet>=1.12
 
 # Lets you generate a requirements.txt file based on the imports used in a
 # python project. Better than `pip freeze > file.txt` when you're interested in
 # just one project's dependencies.
 pipreqs>=0.3.0
+
+# Image processing.
+# Pillow>=2.6.1
+
+# Natural Language Processing.
+# nltk>=3.0.0
+
+# Scientific Computing / Data Science.
+numpy>=1.8.0rc1
+scipy>=0.13.0b1
+
+# Plotting.
+matplotlib>=1.3.1
+
+# Library implementing TLS & its predecessor, SSL. Useful for servers, network.
+pyOpenSSL>=0.13.1
+
+# World timezone definitions. 
+pytz>=2013.7
+
+# Python 2 -> 3 compatibility library.
+six>=1.4.1

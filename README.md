@@ -30,21 +30,23 @@ is possibly outdated. I don't write much Java either.
 
 ## Installation
 
-### Personalize
+### Stage 1: Personalize
 Edit these files.
+
   * For git: `~/.gitconfig`
   * For irssi: `<dotfiles dir>/irssi/config` replace `samliu` with your
     username.
   * For aliases (bash and zsh use same file): `~/.oh-my-zsh/custom/aliases.zsh`
   * For virtualenv in zsh: `~/.oh-my-zsh/custom/virtualenv.zsh`
 
-### Install
-  * Install prereqs
+### Stage 2: Install
+  * Install prereqs listed above.
   * Set zsh to be your default shell: `sudo chsh -s /bin/zsh`
   * git clone git@github.com:samliu/dotfiles.git ~/.dotfiles
   * cd ~/.dotfiles
   * `python install.py` -- follow prompts.
-  * Open vim, run `:PluginInstall` to install plugins with Vundle.
+  * If you're planning on using python, `pip install -r requirements.txt`
+  * Open vim, run `:PluginInstall` to install all plugins with Vundle.
 
 The install script symlinks each file in the dotfile folder to your home
 directory and prompts if an overwrite is going to happen.
