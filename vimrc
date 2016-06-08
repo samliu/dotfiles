@@ -64,7 +64,6 @@ Plugin 'ntpeters/vim-better-whitespace'
 " Creates a left-aligned scrollbar in each buffer. Toggle on/off via <leader>sb.
 " This plugin is a tad slow, so I generally keep it off unless I really want to
 " visually know where I am in a big file.
-" Plugin 'samliu/vim-scrollbar', {'name': 'sam-vim-scrollbar'}
 Plugin 'lornix/vim-scrollbar'
 
 call vundle#end()            " required
