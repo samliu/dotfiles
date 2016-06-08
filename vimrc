@@ -65,6 +65,7 @@ Plugin 'ntpeters/vim-better-whitespace'
 " This plugin is a tad slow, so I generally keep it off unless I really want to
 " visually know where I am in a big file.
 " Plugin 'samliu/vim-scrollbar', {'name': 'sam-vim-scrollbar'}
+Plugin 'lornix/vim-scrollbar'
 
 call vundle#end()            " required
 
@@ -224,7 +225,7 @@ set cc=80
 
 " Put custom aliases here!
 " Help to write a custom alias (since looking it up sucks):
-" Basic commands are :map and :noremap. 
+" Basic commands are :map and :noremap.
 " - :map is recursive, so `:map j gg` and `:map Q j` will result in gg if you
 "   press Q.
 " - :noremap means 'no recursion map' so the same commands above with noremap

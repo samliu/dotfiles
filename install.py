@@ -18,7 +18,8 @@ class DotfileInstaller(object):
         self.currdir = os.path.dirname(os.path.realpath(__file__))
 
         # Files in the root dotfile directory to ignore.
-        self.ignore_files = ['install.py', 'README', 'LICENSE', 'README.md']
+        self.ignore_files = ['install.py', 'README', 'LICENSE', 'README.md',
+                             'requirements.txt']
 
         # Files currently in the user's home directory.
         self.homedir_files = os.listdir(self.homedir)
@@ -41,7 +42,6 @@ class DotfileInstaller(object):
         cmd = 'git submodule update --init'
         os.system(cmd)
         print "Git submodules updated."
-
 
     def link_file(self, filename):
         """Generate symlink in home directory of the user for the dotfile."""
