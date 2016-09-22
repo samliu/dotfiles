@@ -4,6 +4,7 @@
 [core]
     excludesfile = /Users/samliu/.gitignore
     editor = vim
+    filemode = false
 [color]
     diff = auto
     status = auto
