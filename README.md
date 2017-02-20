@@ -28,6 +28,9 @@ is possibly outdated. I don't write much Java either.
   * npm
   * If osx, probably MacPorts (not required but I prefer it over homebrew)
 
+### Optional
+  * rust 1.15+
+
 ## Installation
 
 ### Stage 1: Personalize
@@ -79,7 +82,12 @@ Get [NPM](http://npmjs.com).
 npm install js-beautify -g
 ```
 
+#### Rust
+Install rustfmt.
 
+```bash
+cargo install rustfmt
+```
 
 ## Potential Knots
 
