@@ -66,6 +66,9 @@ Plugin 'ntpeters/vim-better-whitespace'
 " visually know where I am in a big file.
 Plugin 'lornix/vim-scrollbar'
 
+" rust-codefmt
+Plugin 'syml/rust-codefmt'
+
 call vundle#end()            " required
 
 " To ignore plugin indent changes, instead use:

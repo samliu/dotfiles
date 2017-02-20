@@ -1,6 +1,6 @@
 # Sam's Dot files
 
-Configurations are primarily geared toward Python, Go, Javascript, and
+Configurations are primarily geared toward Python, Go, Javascript, Rust, and
 C/C++ programmers. Ruby dependencies or support is an artifact of the past and
 is possibly outdated. I don't write much Java either.
 
