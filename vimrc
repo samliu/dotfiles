@@ -117,6 +117,11 @@ set softtabstop=4
 " equal tabstop.
 set shiftwidth=4
 
+" Rust settings.
+
+" Automatically format buffers upon save for rust.
+let g:rustfmt_autosave = 1
+
 " Python and Ruby indent settings.
 if has("autocmd")
   " Ruby indent settings
