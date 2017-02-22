@@ -69,6 +69,9 @@ Plugin 'lornix/vim-scrollbar'
 " rust-codefmt
 Plugin 'syml/rust-codefmt'
 
+" Official Rust file detection, syntax highlighting, formatting, and more.
+Plugin 'rust-lang/rust.vim'
+
 call vundle#end()            " required
 
 " To ignore plugin indent changes, instead use:
