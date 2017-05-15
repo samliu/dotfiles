@@ -66,6 +66,12 @@ Plugin 'ntpeters/vim-better-whitespace'
 " visually know where I am in a big file.
 Plugin 'lornix/vim-scrollbar'
 
+" rust-codefmt
+Plugin 'syml/rust-codefmt'
+
+" Official Rust file detection, syntax highlighting, formatting, and more.
+Plugin 'rust-lang/rust.vim'
+
 call vundle#end()            " required
 
 " To ignore plugin indent changes, instead use:
@@ -110,6 +116,11 @@ set softtabstop=4
 " Indent width but specifically for reindent operations (<< and >>). Should
 " equal tabstop.
 set shiftwidth=4
+
+" Rust settings.
+
+" Automatically format buffers upon save for rust.
+let g:rustfmt_autosave = 1
 
 " Python and Ruby indent settings.
 if has("autocmd")

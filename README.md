@@ -1,6 +1,6 @@
 # Sam's Dot files
 
-Configurations are primarily geared toward Python, Go, Javascript, and
+Configurations are primarily geared toward Python, Go, Javascript, Rust, and
 C/C++ programmers. Ruby dependencies or support is an artifact of the past and
 is possibly outdated. I don't write much Java either.
 
@@ -27,6 +27,9 @@ is possibly outdated. I don't write much Java either.
   * vim 7.3+ (mvim / gvim optional) w/ Ruby and Python extensions
   * npm
   * If osx, probably MacPorts (not required but I prefer it over homebrew)
+
+### Optional
+  * rust 1.15+
 
 ## Installation
 
@@ -79,7 +82,12 @@ Get [NPM](http://npmjs.com).
 npm install js-beautify -g
 ```
 
+#### Rust
+Install rustfmt.
 
+```bash
+cargo install rustfmt
+```
 
 ## Potential Knots
 
