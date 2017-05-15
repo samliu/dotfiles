@@ -27,7 +27,7 @@ export DISABLE_AUTO_UPDATE="false"
 # ~/.oh-my-zsh/plugins/*)
 #
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git)
+plugins=(git zsh-autosuggestions)
 
 # [oh-my-zsh] Initializes oh-my-zsh.
 source $ZSH/oh-my-zsh.sh
