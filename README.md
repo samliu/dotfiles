@@ -31,6 +31,10 @@ is possibly outdated. I don't write much Java either.
 ### Optional
   * rust 1.15+
 
+If you want to use fish shell instead of zsh:
+  * fish
+  * virtualfish
+
 ## Installation
 
 ### Stage 1: Personalize
