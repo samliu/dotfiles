@@ -136,9 +136,23 @@ if has("autocmd")
 
   " Python indent settings
   augroup module
-    autocmd BufRead,BufNewFile *.py set tabstop=4
-    autocmd BufRead,BufNewFile *.py set shiftwidth=4
-    autocmd BufRead,BufNewFile *.py set softtabstop=4
+    autocmd BufRead,BufNewFile *.py set tabstop=2
+    autocmd BufRead,BufNewFile *.py set shiftwidth=2
+    autocmd BufRead,BufNewFile *.py set softtabstop=2
+  augroup END
+
+  " C++ indent settings
+  augroup module
+    autocmd BufRead,BufNewFile *.cc set tabstop=2
+    autocmd BufRead,BufNewFile *.cc set shiftwidth=2
+    autocmd BufRead,BufNewFile *.cc set softtabstop=2
+    autocmd BufRead,BufNewFile *.h set tabstop=2
+    autocmd BufRead,BufNewFile *.h set shiftwidth=2
+    autocmd BufRead,BufNewFile *.h set softtabstop=2
+    autocmd BufRead,BufNewFile *.c set foldmethod=syntax
+    autocmd BufRead,BufNewFile *.cc set foldmethod=syntax
+    autocmd BufRead,BufNewFile *.cpp set foldmethod=syntax
+    autocmd BufRead,BufNewFile *.h set foldmethod=syntax
   augroup END
 endif
 
@@ -246,6 +260,18 @@ set cc=80
 
 " Alias normal mode `ctrl+l` should run code format if applicable.
 :nnoremap <c-l> :FormatCode<ENTER>
+
+augroup autoformat_settings
+  autocmd FileType bzl AutoFormatBuffer buildifier
+  autocmd FileType c,cpp,proto,javascript AutoFormatBuffer clang-format
+  autocmd FileType dart AutoFormatBuffer dartfmt
+  autocmd FileType go AutoFormatBuffer gofmt
+  autocmd FileType gn AutoFormatBuffer gn
+  autocmd FileType html,css,json AutoFormatBuffer js-beautify
+  autocmd FileType java AutoFormatBuffer google-java-format
+  autocmd FileType python AutoFormatBuffer yapf
+  " Alternative: autocmd FileType python AutoFormatBuffer autopep8
+augroup END
 
 " `APPLE/WIN+\` should reflow word wrap.
 " TODO(samcliu): Fix this, it doesn't work correctly.

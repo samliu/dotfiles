@@ -61,3 +61,23 @@ export PATH=/usr/lib/go/bin/:$PATH
 #  mkdir ~/.npm-global
 #  npm config set prefix '~/.npm-global'
 export PATH=~/.npm-global/bin:$PATH
+
+# Add Flutter (Google Mobile Framework) to path.
+export PATH="$PATH:/opt/flutter/bin"
+
+# Add CUDA to LD_LIBRARY_PATH for Tensorflow.
+export LD_LIBRARY_PATH="/opt/cudnn/lib64:$LD_LIBRARY_PATH"
+
+# ROS
+#source /opt/ros/kinetic/setup.zsh
+
+# tabtab source for electron-forge package
+# uninstall by removing these lines or running `tabtab uninstall electron-forge`
+# [[ -f /home/samliu/.npm-global/lib/node_modules/electron-forge/node_modules/tabtab/.completions/electron-forge.zsh ]] && . /home/samliu/.npm-global/lib/node_modules/electron-forge/node_modules/tabtab/.completions/electron-forge.zsh
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/opt/google-cloud-sdk/path.zsh.inc' ]; then source '/opt/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/opt/google-cloud-sdk/completion.zsh.inc' ]; then source '/opt/google-cloud-sdk/completion.zsh.inc'; fi
+
