@@ -20,3 +20,5 @@ fi
 
 # [RVM] Add RVM into shell session as a function.
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" 
+
+export PATH="$HOME/.cargo/bin:$PATH"
