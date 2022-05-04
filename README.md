@@ -19,9 +19,7 @@ is possibly outdated. I don't write much Java either.
 
 ## Prereqs
   * zsh
-  * python 2.7+
-  * virtualenv
-  * virtualenvwrapper
+  * python 3.9+
   * ack 2.14+ (note: you may want to use silver searcher instead, I heard it's
     good)
   * vim 7.3+ (mvim / gvim optional) w/ Ruby and Python extensions
@@ -131,27 +129,24 @@ You need to run `~/.vim/bundle/command-t/ruby/command-t/extconf.rb` using the
 system ruby (assuming your vim is also system vim), then run `make` in
 the `~/.vim/bundle/command-t/ruby/command-t` folder.
 
-### Python Virtualenv in OS X
+### Virtualenv
 
-I use MacPorts over Homebrew because it's historically been more reliable and
-consistent for me. Since I use `virtualenv` and `rvm` to localize my scripting
-environments, I don't require the system to have a super clean global
-environment. See `~/.oh-my-zsh/custom/virtualenv.zsh` for how I usually
-configure my virtualenvs. I've isolated all virtualenv conf to that file so if
-you want to do it differently you can delete or modify just that file as needed.
+I stopped using virtualenv in favor of the python built-in `venv`.
 
-Warning: When using MacPorts to install python, also use MacPorts to install
-the corresponding `virtualenv` and `virtualenvwrapper` instead of pip. So do
-this:
+Basic usage:
 
 ```
-sudo port install python27 py27-virtualenv py27-virtualenvwrapper
+# Creates a virtualenv in the `my_virtualenv` directory.
+python -m venv my_virtualenv
 ```
 
-If you don't do this and use pip instead, the virtualenv installation location
-will be in your `site-packages` and is just more gnarly to handle. This can all
-be configured within `~/.oh-my-zsh/custom/virtualenv.zsh`
+Then simply run this to use the environment:
 
-## oh-my-zsh didn't initialize
+```
+source my_virtualenv/bin/activate
+```
 
-Run `git submodule update --init` because the oh-my-zsh is a git submodule.
+I typically keep all my environments in `~/.virtualenvs`, and have
+my .bashrc/.zshrc source my most commonly used environment. For testing
+a python app, I'll often create a fresh environment with only the bare
+requirements installed.
