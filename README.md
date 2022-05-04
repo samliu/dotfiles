@@ -28,6 +28,16 @@ is possibly outdated. I don't write much Java either.
   * npm
   * If osx, probably MacPorts (not required but I prefer it over homebrew)
 
+### Installing VIM with MacPorts
+
+Make sure you install VIM with support for Python3, otherwise the jedi vim
+plugin won't work. While we're here, x11 support is nice too. And some others
+if we ever decide to get fancy :)
+
+```
+sudo port install vim +python39 +ruby25 +perl +x11 +xim
+```
+
 ### Optional
   * rust 1.15+
 
