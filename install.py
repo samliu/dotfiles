@@ -38,18 +38,17 @@ class DotfileInstaller(object):
         self.colorprinter = ColorPrinter()
 
         # Pull submodule dependencies.
-        print "Updating submodules..."
+        print("Updating submodules...")
         cmd = 'git submodule update --init'
         os.system(cmd)
-        print "Git submodules updated."
+        print("Git submodules updated.")
 
     def link_file(self, filename):
         """Generate symlink in home directory of the user for the dotfile."""
         dotfile_name = '.' + filename
-        print 'linking ~/{0}...'.format(dotfile_name)
+        print(f'linking ~/{dotfile_name}...')
         dotfile_fullpath = self.homedir + '/' + dotfile_name
-        cmd = 'ln -s "{0}/{1}" "{2}"'.format(self.currdir, filename,
-                                             dotfile_fullpath)
+        cmd = f'ln -s "{self.currdir}/{filename}" "{dotfile_fullpath}"'
         if (os.path.isfile(dotfile_fullpath) or os.path.isdir(dotfile_fullpath)
                 or os.path.islink(dotfile_fullpath)):
             if not os.path.islink(dotfile_fullpath):
@@ -62,13 +61,13 @@ class DotfileInstaller(object):
             user_response = raw_input(
                 'overwrite ' + dotfile_fullpath + '? (y/n)')
             if user_response not in ['y']:
-                print 'skipping ' + dotfile_fullpath + '...'
+                print('skipping ' + dotfile_fullpath + '...')
                 return
             # Overwrite file.
             os.unlink(dotfile_fullpath)
 
         # Generate the symlink
-        print cmd
+        print(cmd)
         os.system(cmd)
 
     def install(self, auto_override=False):
@@ -85,7 +84,7 @@ def cli():
 
     # Die if they don't say yes.
     if user_response not in ['y', 'yes']:
-        print "Nothing installed."
+        print("Nothing installed.")
         sys.exit()
 
     # Install dotfiles one by one, prompting user for each one if there is an
@@ -111,16 +110,17 @@ class ColorPrinter(object):
 
     def println(self, text, color="NONE"):
         if color in self.colors:
-            print self.colors[color] + text + self.colors["ENDC"]
+            print(self.colors[color] + text + self.colors["ENDC"])
         else:
-            print text
+            print(text)
 
 
 if __name__ == "__main__":
     if sys.version_info.major > 2:
         # Python 3 doesn't have raw_input().
         def raw_input(query_string):
-            input(query_string)
+            return input(query_string)
+            
         cli()
     else:
         cli()

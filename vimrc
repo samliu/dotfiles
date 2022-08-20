@@ -26,6 +26,12 @@ call vundle#begin("~/.vim/bundle")
 
 " INSERT VUNDLE PLUGINS HERE.
 
+" vim-solidity
+Plugin 'tomlion/vim-solidity'
+
+" typescript-vim
+Plugin 'leafgarland/typescript-vim'
+
 " vim-jedi - Autocompletion for Python
 Plugin 'davidhalter/jedi-vim'
 
@@ -59,12 +65,6 @@ Plugin 'tpope/vim-surround'
 
 " Better Whitespace Highlighting
 Plugin 'ntpeters/vim-better-whitespace'
-
-" vim-scrollbar
-" Creates a left-aligned scrollbar in each buffer. Toggle on/off via <leader>sb.
-" This plugin is a tad slow, so I generally keep it off unless I really want to
-" visually know where I am in a big file.
-Plugin 'lornix/vim-scrollbar'
 
 " rust-codefmt
 Plugin 'syml/rust-codefmt'
@@ -269,7 +269,7 @@ augroup autoformat_settings
   autocmd FileType gn AutoFormatBuffer gn
   autocmd FileType html,css,json AutoFormatBuffer js-beautify
   autocmd FileType java AutoFormatBuffer google-java-format
-  autocmd FileType python AutoFormatBuffer yapf
+  " autocmd FileType python AutoFormatBuffer yapf
   " Alternative: autocmd FileType python AutoFormatBuffer autopep8
 augroup END
 

@@ -4,4 +4,4 @@ tmp = /tmp
 
 # Install global npm packages in the user's local folder.
 # npm config set prefix '~/.npm-global'
-prefix = ~/.npm-global
+# prefix = ~/.npm-global

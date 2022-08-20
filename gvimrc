@@ -10,11 +10,11 @@ set go-=T
 " Column 80 indicator
 set cc=80
 
-" Colorscheme and font.
-set bg=dark
-if &background == "dark"
-    hi normal guibg=black
-endif
+" " Colorscheme and font.
+" set bg=dark
+" if &background == "dark"
+"     hi normal guibg=black
+" endif
 " set guifont=Inconsolata:h16
 " colorscheme ir_black
-colorscheme lucid
+colorscheme sourcerer
